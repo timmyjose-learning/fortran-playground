@@ -1,0 +1,21 @@
+name = "comm_stdlib_demo"
+version = "0.1.0"
+license = "license"
+author = "Timmy Jose"
+maintainer = "zoltan.jose@gmail.com"
+copyright = "Copyright 2026, Timmy Jose"
+[build]
+auto-executables = true
+auto-tests = true
+auto-examples = true
+module-naming = false
+[install]
+library = false
+test = false
+[fortran]
+implicit-typing = false
+implicit-external = false
+source-form = "free"
+[dependencies]
+stdlib = { git="https://github.com/fortran-lang/stdlib", branch="stdlib-fpm" }
+
