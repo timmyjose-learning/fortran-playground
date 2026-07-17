@@ -25,6 +25,8 @@ contains
          res = 'allocation error'
       case (ERR_RANGE)
          res = 'range error'
+      case default
+         res = 'unknown error'
       end select
    end function error_name
 end module errors_m
@@ -35,4 +37,5 @@ program ex05_error_codes
 
    write (*, *) error_name(ERR_ALLOC)
    write (*, *) error_name(ERR_OK)
+   write (*, *) error_name(10)
 end program ex05_error_codes
