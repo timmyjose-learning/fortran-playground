@@ -1,0 +1,18 @@
+name = "config_parser"
+version = "0.1.0"
+license = "license"
+author = "Timmy Jose"
+maintainer = "zoltan.jose@gmail.com"
+copyright = "Copyright 2026, Timmy Jose"
+
+[features]
+debug.flags = "-g -O0 -Wall -Werror -std=f2023"
+debug.gfortran.flags = "-fcheck=bounds"
+
+release.flags = "-O3 -Wall -std=f2023"
+release.gfortran.flags = "-march=native"
+
+[profiles]
+debug = ["debug"]
+release = ["release"]
+
