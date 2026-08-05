@@ -1,6 +1,12 @@
 program main
-  use algods, only: say_hello
-  implicit none
+   implicit none
 
-  call say_hello()
+   integer, allocatable :: p
+
+   allocate(p)
+   if (allocated(p)) then
+      deallocate(p)
+   end if
+
+   write (*, *) 'Welcome'
 end program main

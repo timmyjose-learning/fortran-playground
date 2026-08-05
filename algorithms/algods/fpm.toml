@@ -5,3 +5,14 @@ author = "Timmy Jose"
 maintainer = "zoltan.jose@gmail.com"
 copyright = "Copyright 2026, Timmy Jose"
 
+[features]
+debug_mode.gfortran.flags = "-g -O0 -fsanitize=address,undefined -fcoarray=single -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native"
+debug_threaded_mode.gfortran.flags = "-g -O0 -fsanitize=thread,undefined -fcoarray=single -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native"
+release_mode.gfortran.flags = "-O2 -fcoarray=single -fbounds-check -funroll-loops -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native"
+
+[profiles]
+debug = ["debug_mode"]
+debug_thread = ["debug_threaded_mode"]
+release = ["release_mode"]
+
+

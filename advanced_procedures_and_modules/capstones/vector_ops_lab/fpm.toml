@@ -1,0 +1,14 @@
+name = "vector_ops_lab"
+version = "0.1.0"
+license = "license"
+author = "Timmy Jose"
+maintainer = "zoltan.jose@gmail.com"
+copyright = "Copyright 2026, Timmy Jose"
+
+[features]
+debug_mode.flags = "-g -O0 -fcoarray=single -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native"
+release_mode.flags = "-O2 -fcoarray=single -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native"
+
+[profiles]
+debug = ["debug_mode"]
+release = ["release_mode"]
