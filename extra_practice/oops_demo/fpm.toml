@@ -1,0 +1,15 @@
+name = "oops_demo"
+version = "0.1.0"
+license = "license"
+author = "Timmy Jose"
+maintainer = "zoltan.jose@gmail.com"
+copyright = "Copyright 2026, Timmy Jose"
+
+[features]
+debug.gfortran.flags = "-g -O0 -fcoarray=single -fbacktrace -fno-omit-frame-pointer -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -pedantic -march=native -fsanitize=address,undefined"
+rlease.gfortran.flags = "-O2 -fcoarray=single -fbounds-check -std=f2023 -Wall -Wextra -Wtrampolines -march=native"
+
+[profiles]
+debug = ["debug"]
+release = ["release"]
+
