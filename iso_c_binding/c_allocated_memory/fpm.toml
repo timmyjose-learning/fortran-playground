@@ -1,0 +1,17 @@
+name = "c_allocated_memory"
+version = "0.1.0"
+license = "license"
+author = "Timmy Jose"
+maintainer = "zoltan.jose@gmail.com"
+copyright = "Copyright 2026, Timmy Jose"
+
+[features]
+debug_mode.gfortran.flags = "-g -O0 -fsanitize=address,undefined -fcheck=all -std=f2023 -Wall -Wextra -pedantic -march=native"
+debug_mode.c-flags = "-g -O0 -fsanitize=address,undefined"
+debug_mode.link-time-flags = "-fsanitize=address,undefined"
+
+release_mode.gfortran.flags = "-O2 -fcheck=all -std=f2023 -Wall -Wextra -pedantic -march=native"
+
+[profiles]
+debug = ["debug_mode"]
+release = ["release_mode"]
